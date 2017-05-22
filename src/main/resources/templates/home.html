@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Police report in the UK
+<br>
+{{#policedata}}
+<br>
+When: {{month}}
+<br>
+Location: {{#location}} {{street}} {{/location}}
+<br>
+Category: {{category}}
+<br>
+Status: {{#outcome_status}} {{category}} {{/outcome_status}}
+<br>
+{{/policedata}}
+</body>
+</html>
