@@ -19,8 +19,8 @@ public class Controller {
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home(Model model) {
-        PoliceDataList policeData = policeReportService.getUrlData();
+    public String home(Model model, String month, String year) {
+        PoliceDataList policeData = policeReportService.getUrlData(month, year);
         model.addAttribute("policedata", policeData);
         return "home";
     }
